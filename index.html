@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body onload="on_load();">
+    <script src="script.js"></script>
+		<h1>Rock, Paper, Scissors</h1>
+		<h2 id='result'>Click any of the buttons to play!</h2>
+		<table>
+			<tr class='emojis'>
+				<td class='headers' style="font-size: 0.5em;">👤 You</td>
+				<td class='headers' style="font-size: 0.5em;"> vs. </td>
+				<td class='headers' style="font-size: 0.5em;">🤖 Robot</td>
+			</tr>
+			<tr class='emojis'>
+				<td class='headers' style="font-size: 0.5em;" id='hscorel'>0</td>
+				<td class='headers' style="font-size: 0.5em;"> - </td>
+				<td class='headers' style="font-size: 0.5em;" id='cscorel'>0</td>
+			</tr>
+			<tr class='emojis'>
+				<td class='emojis' id='hemoji'>⠀</td>
+				<td id="sign"> - </td>
+				<td class='emojis' id='cemoji'>⠀</td>
+			</tr>
+		</table>
+		<form>
+			<button onclick="main('rock');" type="button" name="rock" class='button'>Rock 🗿</button>
+			<button onclick="main('paper');" type="button" name="paper" class='button'>Paper 📄</button><br>
+			<button onclick="main('scissors');" type="button" name="scissors" class='button'>Scissors ✂️</button>
+			<button onclick="r();" type="button" name="random" class='button'>Random 🎲</button>
+			<br><br>
+			<button onclick="resetScore();" type="button" name="reset" class='button' id='warnButton'>Reset my Score ⚠️</button><br>
+			<p id='warning' style='display: none;'>⚠️ Click againt to confirm the reset. Please note that this is permanent. ⚠️</p>
+		</form>
+		
+  </body>
+</html>
